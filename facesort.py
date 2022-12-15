@@ -55,7 +55,7 @@ else:
     dir = os.listdir(faces_directory)
     if len(dir) != 0 and arg != '-o':
         print("To avoid losing or overwriting data please make sure the", work_path, "and", faces_directory, "are empty of any data you don't want to lose.")
-        print("Use \"python facesort -o\" to allow overwriting files. (Not recommended)")
+        print("Use \"python facesort.py -o\" to allow overwriting files. (Not recommended)")
         print("Alternatively, you can change the path variables in facesort.py")
         exit(1)
 
@@ -125,7 +125,8 @@ def match_face(image, directory, face_to_check, list_of_people=people_list):
         img1_path = directory + face_to_check
         img2_path = directory + person
         verify = DeepFace.verify(img1_path, img2_path, enforce_detection=False, model_name=deepface_models[0], distance_metric=deepface_metrics[0], align=True)
-        # print("checking ", img1_path, " vs ", img2_path)
+
+        # check result of DeepFace verification
         if verify['verified'] and face_to_check != person:
             # face already exists, add the current image to the list of this persons ID
             # extract PersonID from the face that face_to_check matched with
@@ -152,10 +153,7 @@ def extract_faces():
         # list of faces found in image
         print(len(faces), "face(s) were found in image: ", image)
 
-        # testing confidence score
-        # confidence_score = RetinaFace.detect_faces(images_directory + image)
-        # print(confidence_score)
-
+        # loop through all faces in the image
         for face in faces:
             # save temporary temp_face image to faces_directory
             plt.imsave(fname = faces_directory + temp_face, format='png', arr=face)
