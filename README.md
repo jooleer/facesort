@@ -1,7 +1,5 @@
 # FaceSort
 
-#### Video Demo: https://youtu.be/_cZjR3e6i68
-
 ## Description:
 
 FaceSort uses python with a combination of the [Deepface](https://github.com/serengil/deepface) and [RetinaFace](https://github.com/serengil/retinaface) libraries to detect faces from a collection of images and afterwards sorts them by recognizing those faces and arranges the images in folders for each unique face found.
