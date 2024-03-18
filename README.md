@@ -7,7 +7,7 @@ FaceSort uses python with a combination of the [Deepface](https://github.com/ser
 
 # Installation:
 
-Making sure the packages from `requirements.txt` are installed, the easiest way is to `git clone https://github.com/joleer/facesort` and use `pip install -r requirements.txt`
+Making sure the packages from `requirements.txt` are installed, the easiest way is to `git clone https://github.com/jooleer/facesort` and use `pip install -r requirements.txt`
 
 Alternatively, you can also manually install the packages:
 
