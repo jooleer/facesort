@@ -1,0 +1,4 @@
+deepface>=0.0.75
+retina-face>=0.0.12
+matplotlib.pyplot>=3.6.2
+opencv-python>=4.7.0.71
