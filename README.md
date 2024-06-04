@@ -14,7 +14,7 @@ Alternatively, you can also manually install the packages:
 ```
 pip install deepface
 pip install retina-face
-pip install matplotlib.pyplot
+pip install matplotlib
 pip install opencv-python
 ```
 
